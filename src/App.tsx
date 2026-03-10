@@ -65,7 +65,7 @@ export default function App() {
   const team = [
     { name: "Maya", role: "Project Manager", linkedin: "https://www.linkedin.com/in/maya-falodia/" },
     { name: "Dylan", role: "Graphic Designer" },
-    { name: "Ayesha", role: "Graphic Designer", linkedin: "https://www.linkedin.com/in/ayeshakhan25/" },
+    { name: "Ayesha", role: "UX Designer", linkedin: "https://www.linkedin.com/in/ayeshakhan25/" },
     { name: "Aditi", role: "Software Engineer", linkedin: "https://www.linkedin.com/in/aditirrr/" },
     { name: "Nitya", role: "Software Engineer", linkedin: "https://www.linkedin.com/in/nitya-addanki/" }
   ];
