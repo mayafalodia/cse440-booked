@@ -97,7 +97,7 @@ export default function App() {
               <div className="mb-8">
                 <Logo className="text-6xl md:text-8xl mb-4" />
                 <h1 className="text-4xl md:text-5xl font-header font-black leading-tight tracking-tight text-brand-text">
-                  Read more of what <span className="italic text-brand-primary">actually</span> matters.
+                  ...Because Books <span className="italic text-brand-primary">Deserve</span> Your Time.
                 </h1>
               </div>
               <p className="text-xl text-brand-text/80 mb-10 leading-relaxed max-w-3xl font-body">
@@ -112,7 +112,16 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-4xl md:text-5xl font-header font-black mb-6">See the vision.</h2>
-              <p className="text-lg text-white/70 font-body">Watch our concept video to see how BOOKED is redefining the reading experience for the digital age.</p>
+              <p className="text-lg text-white/70 font-body mb-8">Watch our concept video to see how BOOKED is redefining the reading experience for the digital age.</p>
+              <a 
+                href="https://www.figma.com/design/Np3A7qP7Gm8j2U5xh0Ukt7/Booked?node-id=0-1&t=BmOgsTSzv8cRXB7K-1" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-brand-text rounded-full font-accent font-bold hover:bg-brand-primary hover:text-white transition-all shadow-lg group"
+              >
+                Explore the Design in Figma
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
             <div className="aspect-video w-full max-w-5xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/10">
               <iframe 
