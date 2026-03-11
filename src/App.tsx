@@ -62,6 +62,14 @@ const Logo = ({ className = "" }: { className?: string }) => (
 );
 
 export default function App() {
+  const getAssetUrl = (path: string) => {
+    const base = import.meta.env.BASE_URL || '/';
+    // Ensure base ends with / and path doesn't start with /
+    const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+    const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
+    return `${normalizedBase}${normalizedPath}`;
+  };
+
   const team = [
     { name: "Maya", role: "Project Manager", linkedin: "https://www.linkedin.com/in/maya-falodia/" },
     { name: "Dylan", role: "Graphic Designer" },
@@ -112,7 +120,7 @@ export default function App() {
         </section>
 
         {/* The Problem Section */}
-        <section id="problem" className="pt-16 pb-24 border-y border-brand-text/5">
+        <section id="problem" className="pt-16 pb-24 border-y border-brand-text/5 scroll-mt-40">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
@@ -131,7 +139,7 @@ export default function App() {
         </section>
 
         {/* Our Solution Section */}
-        <section id="solution" className="py-24 bg-[#fdfcf8]">
+        <section id="solution" className="py-24 bg-[#fdfcf8] scroll-mt-40">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
@@ -161,7 +169,7 @@ export default function App() {
         </section>
 
         {/* Our Process Section */}
-        <section id="process" className="py-24 bg-white">
+        <section id="process" className="py-24 bg-white scroll-mt-40">
           <div className="max-w-7xl mx-auto px-6">
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-header font-black text-brand-primary uppercase tracking-tight">our process</h2>
@@ -172,7 +180,7 @@ export default function App() {
               <div className="flex-1 flex flex-col items-center text-center">
                 <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
-                    src="Sketching.png" 
+                    src={getAssetUrl("Sketching.png")} 
                     alt="Sketching" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -191,7 +199,7 @@ export default function App() {
               <div className="flex-[1.3] flex flex-col items-center text-center">
                 <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
-                    src="Storyboarding.png" 
+                    src={getAssetUrl("Storyboarding.png")} 
                     alt="Storyboarding" 
                     className="w-full h-auto scale-110"
                     referrerPolicy="no-referrer"
@@ -210,7 +218,7 @@ export default function App() {
               <div className="flex-[1.3] flex flex-col items-center text-center">
                 <div className="w-full aspect-[3/4] bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
-                    src="PaperPrototype.jpeg" 
+                    src={getAssetUrl("PaperPrototype.jpeg")} 
                     alt="Paper Prototyping" 
                     className="w-full h-full object-cover rotate-90 scale-110 md:scale-125"
                     referrerPolicy="no-referrer"
@@ -229,7 +237,7 @@ export default function App() {
               <div className="flex-1 flex flex-col items-center text-center">
                 <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
-                    src="figma.png" 
+                    src={getAssetUrl("figma.png")} 
                     alt="Figma Mock-up" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -244,7 +252,7 @@ export default function App() {
         </section>
 
         {/* Concept Video Section */}
-        <section id="video" className="py-24 bg-brand-text text-white">
+        <section id="video" className="py-24 bg-brand-text text-white scroll-mt-40">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-4xl md:text-5xl font-header font-black mb-6">See the vision.</h2>
@@ -274,7 +282,7 @@ export default function App() {
         </section>
 
         {/* App Walkthrough Section */}
-        <section id="walkthrough" className="py-24 bg-white">
+        <section id="walkthrough" className="py-24 bg-white scroll-mt-40">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-lg font-accent font-bold text-brand-primary uppercase tracking-[0.2em] mb-4">Experience the App</h2>
@@ -295,14 +303,14 @@ export default function App() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="py-24 bg-brand-bg/10">
+        <section id="features" className="py-24 bg-brand-bg/10 scroll-mt-40">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-20">
               <h2 className="text-4xl md:text-5xl font-header font-black mb-6 text-brand-text">Designed for the modern reader.</h2>
               <p className="text-lg text-brand-text/70 font-body">We built the tools we wished we had to reclaim our focus and rediscover the joy of getting lost in a book.</p>
               <div className="mt-12 max-w-5xl mx-auto">
                 <img 
-                  src="BookedFeatures.png" 
+                  src={getAssetUrl("BookedFeatures.png")} 
                   alt="BOOKED App Interface" 
                   className="w-full rounded-2xl shadow-xl border border-brand-text/5"
                   referrerPolicy="no-referrer"
@@ -331,7 +339,7 @@ export default function App() {
         </section>
 
         {/* Team Section */}
-        <section id="team" className="py-24">
+        <section id="team" className="py-24 scroll-mt-40">
           <div className="max-w-7xl mx-auto px-6">
             <div className="bg-brand-text rounded-[3rem] p-12 md:p-20 text-white overflow-hidden relative">
               <div className="relative z-10 flex flex-col items-center text-center">
