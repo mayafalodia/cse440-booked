@@ -18,6 +18,13 @@ import {
   Linkedin
 } from "lucide-react";
 
+// Import assets
+import sketchingImg from "./assets/Sketching.png";
+import storyboardingImg from "./assets/Storyboarding.png";
+import paperPrototypeImg from "./assets/PaperPrototype.jpeg";
+import figmaImg from "./assets/figma.png";
+import bookedFeaturesImg from "./assets/BookedFeatures.png";
+
 const TeamMember = ({ name }: { name: string }) => (
   <div className="flex flex-col items-center space-y-2">
     <div className="w-16 h-16 rounded-full bg-brand-primary/10 flex items-center justify-center text-brand-primary font-header text-xl font-bold">
@@ -62,14 +69,6 @@ const Logo = ({ className = "" }: { className?: string }) => (
 );
 
 export default function App() {
-  const getAssetUrl = (path: string) => {
-    const base = import.meta.env.BASE_URL || '/';
-    // Ensure base ends with / and path doesn't start with /
-    const normalizedBase = base.endsWith('/') ? base : `${base}/`;
-    const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
-    return `${normalizedBase}${normalizedPath}`;
-  };
-
   const team = [
     { name: "Maya", role: "Project Manager", linkedin: "https://www.linkedin.com/in/maya-falodia/" },
     { name: "Dylan", role: "Graphic Designer" },
@@ -180,10 +179,9 @@ export default function App() {
               <div className="flex-1 flex flex-col items-center text-center">
                 <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
-                    src={getAssetUrl("Sketching.png")} 
+                    src={sketchingImg} 
                     alt="Sketching" 
                     className="w-full h-auto"
-                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
@@ -199,10 +197,9 @@ export default function App() {
               <div className="flex-[1.3] flex flex-col items-center text-center">
                 <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
-                    src={getAssetUrl("Storyboarding.png")} 
+                    src={storyboardingImg} 
                     alt="Storyboarding" 
                     className="w-full h-auto scale-110"
-                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
@@ -218,10 +215,9 @@ export default function App() {
               <div className="flex-[1.3] flex flex-col items-center text-center">
                 <div className="w-full aspect-[3/4] bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
-                    src={getAssetUrl("PaperPrototype.jpeg")} 
+                    src={paperPrototypeImg} 
                     alt="Paper Prototyping" 
                     className="w-full h-full object-cover rotate-90 scale-110 md:scale-125"
-                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
@@ -237,10 +233,9 @@ export default function App() {
               <div className="flex-1 flex flex-col items-center text-center">
                 <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
-                    src={getAssetUrl("figma.png")} 
+                    src={figmaImg} 
                     alt="Figma Mock-up" 
                     className="w-full h-auto"
-                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
@@ -310,10 +305,9 @@ export default function App() {
               <p className="text-lg text-brand-text/70 font-body">We built the tools we wished we had to reclaim our focus and rediscover the joy of getting lost in a book.</p>
               <div className="mt-12 max-w-5xl mx-auto">
                 <img 
-                  src={getAssetUrl("BookedFeatures.png")} 
+                  src={bookedFeaturesImg} 
                   alt="BOOKED App Interface" 
                   className="w-full rounded-2xl shadow-xl border border-brand-text/5"
-                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>
