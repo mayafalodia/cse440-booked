@@ -19,11 +19,11 @@ import {
 } from "lucide-react";
 
 // Import assets
-import sketchingImg from "./assets/Sketching.png";
-import storyboardingImg from "./assets/Storyboarding.png";
-import paperPrototypeImg from "./assets/PaperPrototype.jpeg";
-import figmaImg from "./assets/figma.png";
-import bookedFeaturesImg from "./assets/BookedFeatures.png";
+import sketchingImg from "./assets/Sketching.jpeg";
+import storyboardingImg from "./assets/Storyboarding.jpeg";
+import paperPrototypeImg from "./assets/Paper.jpeg";
+import figmaImg from "./assets/Figma.jpeg";
+import bookedFeaturesImg from "./assets/AppLayout.jpeg";
 
 const TeamMember = ({ name }: { name: string }) => (
   <div className="flex flex-col items-center space-y-2">
