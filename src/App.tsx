@@ -77,6 +77,9 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <Logo className="text-2xl" />
           <div className="hidden md:flex items-center space-x-8 text-sm font-accent font-bold text-brand-text/70">
+            <a href="#problem" className="hover:text-brand-primary transition-colors">The Problem</a>
+            <a href="#solution" className="hover:text-brand-primary transition-colors">Our Solution</a>
+            <a href="#process" className="hover:text-brand-primary transition-colors">Our Process</a>
             <a href="#video" className="hover:text-brand-primary transition-colors">Concept</a>
             <a href="#features" className="hover:text-brand-primary transition-colors">Features</a>
             <a href="#team" className="hover:text-brand-primary transition-colors">Team</a>
@@ -86,7 +89,7 @@ export default function App() {
 
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-6">
+        <section className="pt-32 pb-12 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -97,13 +100,145 @@ export default function App() {
               <div className="mb-8">
                 <Logo className="text-6xl md:text-8xl mb-4" />
                 <h1 className="text-4xl md:text-5xl font-header font-black leading-tight tracking-tight text-brand-text">
-                  ...Because Books <span className="italic text-brand-primary">Deserve</span> Your Time.
+                  ...Because Books <span className="text-brand-primary">Deserve</span> Your Time.
                 </h1>
               </div>
               <p className="text-xl text-brand-text/80 mb-10 leading-relaxed max-w-3xl font-body">
                 Master your TBR with an active reading timer and a scheduler that sends reminders. Discover your next favorite book through AI-powered recommendations and immersive video and written reviews.
               </p>
             </motion.div>
+          </div>
+        </section>
+
+        {/* The Problem Section */}
+        <section id="problem" className="pt-16 pb-24 border-y border-brand-text/5">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-lg font-accent font-bold text-brand-primary uppercase tracking-[0.2em] mb-4">The Problem</h2>
+                <h3 className="text-3xl md:text-4xl font-header font-black text-brand-text leading-tight">
+                  Why is it so hard to just <span className="italic">read</span>?
+                </h3>
+              </div>
+              <div>
+                <p className="text-xl text-brand-text font-body leading-relaxed">
+                  Students intend to read more, but struggle to make a habit within a busy, distracting, and unmotivating system, and find difficulties choosing their next book.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Solution Section */}
+        <section id="solution" className="py-24 bg-[#fdfcf8]">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <div className="space-y-8">
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-primary/10 flex items-center justify-center text-brand-primary font-header font-black">1</div>
+                    <p className="text-xl text-brand-text font-body">
+                      Discover books through community and AI-based suggestions
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-primary/10 flex items-center justify-center text-brand-primary font-header font-black">2</div>
+                    <p className="text-xl text-brand-text font-body">
+                      Schedule and track reading to build long-term habits.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="order-1 md:order-2">
+                <h2 className="text-lg font-accent font-bold text-brand-primary uppercase tracking-[0.2em] mb-4">Our Solution</h2>
+                <h3 className="text-3xl md:text-4xl font-header font-black text-brand-text leading-tight mb-6">
+                  We designed a mobile app to help:
+                </h3>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Process Section */}
+        <section id="process" className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="mb-16">
+              <h2 className="text-5xl md:text-6xl font-header font-black text-brand-primary uppercase tracking-tight mb-12">Process</h2>
+            </div>
+            
+            <div className="flex flex-col md:flex-row items-start justify-between gap-8">
+              {/* Step 1 */}
+              <div className="flex-1 flex flex-col items-center text-center">
+                <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
+                  <img 
+                    src="Sketching.png" 
+                    alt="Sketching" 
+                    className="w-full h-auto"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
+                  Sketching at the start helped us generate & iterate on many ideas, fast.
+                </p>
+              </div>
+
+              <div className="hidden md:flex items-center pt-32">
+                <ArrowRight className="text-brand-text/20" size={32} />
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex-1 flex flex-col items-center text-center">
+                <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
+                  <img 
+                    src="Storyboarding.png" 
+                    alt="Storyboarding" 
+                    className="w-full h-auto"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
+                  Storyboarding a key interaction with the product helped us convey our concept after implementing user research.
+                </p>
+              </div>
+
+              <div className="hidden md:flex items-center pt-32">
+                <ArrowRight className="text-brand-text/20" size={32} />
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex-1 flex flex-col items-center text-center">
+                <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
+                  <img 
+                    src="PaperPrototypee.jpeg" 
+                    alt="Paper Prototyping" 
+                    className="w-full h-auto rotate-90 scale-75 md:scale-100"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
+                  Paper prototyping helped us test user flows and iterate on designs based on usability testing feedback.
+                </p>
+              </div>
+
+              <div className="hidden md:flex items-center pt-32">
+                <ArrowRight className="text-brand-text/20" size={32} />
+              </div>
+
+              {/* Step 4 */}
+              <div className="flex-1 flex flex-col items-center text-center">
+                <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
+                  <img 
+                    src="figma.png" 
+                    alt="Figma Mock-up" 
+                    className="w-full h-auto"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
+                  Figma mock-up of our final design.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -143,6 +278,14 @@ export default function App() {
             <div className="text-center max-w-3xl mx-auto mb-20">
               <h2 className="text-4xl md:text-5xl font-header font-black mb-6 text-brand-text">Designed for the modern reader.</h2>
               <p className="text-lg text-brand-text/70 font-body">We built the tools we wished we had to reclaim our focus and rediscover the joy of getting lost in a book.</p>
+              <div className="mt-12 max-w-5xl mx-auto">
+                <img 
+                  src="BookedFeatures.png" 
+                  alt="BOOKED App Interface" 
+                  className="w-full rounded-2xl shadow-xl border border-brand-text/5"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
