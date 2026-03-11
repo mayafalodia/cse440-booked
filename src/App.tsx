@@ -123,7 +123,7 @@ export default function App() {
               </div>
               <div>
                 <p className="text-xl text-brand-text font-body leading-relaxed">
-                  Students intend to read more, but struggle to make a habit within a busy, distracting, and unmotivating system, and find difficulties choosing their next book.
+                  Students ages 18-23 intend to read more, but struggle to make a habit within a busy, distracting, and unmotivating system, and find difficulties choosing their next book.
                 </p>
               </div>
             </div>
@@ -153,7 +153,7 @@ export default function App() {
               <div className="order-1 md:order-2">
                 <h2 className="text-lg font-accent font-bold text-brand-primary uppercase tracking-[0.2em] mb-4">Our Solution</h2>
                 <h3 className="text-3xl md:text-4xl font-header font-black text-brand-text leading-tight mb-6">
-                  We designed a mobile app to help:
+                  We designed a mobile app to help
                 </h3>
               </div>
             </div>
@@ -172,7 +172,7 @@ export default function App() {
               <div className="flex-1 flex flex-col items-center text-center">
                 <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
-                    src="/Sketching.png" 
+                    src="Sketching.png" 
                     alt="Sketching" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -191,7 +191,7 @@ export default function App() {
               <div className="flex-[1.3] flex flex-col items-center text-center">
                 <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
-                    src="/Storyboarding.png" 
+                    src="Storyboarding.png" 
                     alt="Storyboarding" 
                     className="w-full h-auto scale-110"
                     referrerPolicy="no-referrer"
@@ -210,7 +210,7 @@ export default function App() {
               <div className="flex-[1.3] flex flex-col items-center text-center">
                 <div className="w-full aspect-[3/4] bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
-                    src="PaperPrototypee.jpeg" 
+                    src="PaperPrototype.jpeg" 
                     alt="Paper Prototyping" 
                     className="w-full h-full object-cover rotate-90 scale-110 md:scale-125"
                     referrerPolicy="no-referrer"
