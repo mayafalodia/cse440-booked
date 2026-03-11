@@ -74,13 +74,14 @@ export default function App() {
     <div className="min-h-screen selection:bg-brand-primary/20">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-[#fdfcf8]/80 backdrop-blur-md border-b border-brand-text/5">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Logo className="text-2xl" />
-          <div className="hidden md:flex items-center space-x-8 text-sm font-accent font-bold text-brand-text/70">
+        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col items-center gap-6">
+          <Logo className="text-4xl justify-center" />
+          <div className="hidden md:flex items-center justify-center flex-wrap gap-x-8 gap-y-2 text-sm font-accent font-bold text-brand-text/70">
             <a href="#problem" className="hover:text-brand-primary transition-colors">The Problem</a>
             <a href="#solution" className="hover:text-brand-primary transition-colors">Our Solution</a>
             <a href="#process" className="hover:text-brand-primary transition-colors">Our Process</a>
             <a href="#video" className="hover:text-brand-primary transition-colors">Concept</a>
+            <a href="#walkthrough" className="hover:text-brand-primary transition-colors">Walkthrough</a>
             <a href="#features" className="hover:text-brand-primary transition-colors">Features</a>
             <a href="#team" className="hover:text-brand-primary transition-colors">Team</a>
           </div>
@@ -89,7 +90,7 @@ export default function App() {
 
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-12 px-6">
+        <section className="pt-48 pb-12 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -97,14 +98,14 @@ export default function App() {
               transition={{ duration: 0.6 }}
               className="flex flex-col items-center"
             >
-              <div className="mb-8">
-                <Logo className="text-6xl md:text-8xl mb-4" />
+              <div className="mb-8 flex flex-col items-center">
+                <Logo className="text-6xl md:text-8xl mb-4 justify-center" />
                 <h1 className="text-4xl md:text-5xl font-header font-black leading-tight tracking-tight text-brand-text">
-                  ...Because Books <span className="text-brand-primary">Deserve</span> Your Time.
+                  ...Because <span className="text-brand-primary">Books</span> Deserve Your Time.
                 </h1>
               </div>
               <p className="text-xl text-brand-text/80 mb-10 leading-relaxed max-w-3xl font-body">
-                Master your TBR with an active reading timer and a scheduler that sends reminders. Discover your next favorite book through AI-powered recommendations and immersive video and written reviews.
+                Booked helps you build a consistent reading habit by allowing you to prioritize and schedule reading, explore community video and written reviews, and receive personalized AI recommendations based on your interests and reading history.
               </p>
             </motion.div>
           </div>
@@ -162,8 +163,8 @@ export default function App() {
         {/* Our Process Section */}
         <section id="process" className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="mb-16">
-              <h2 className="text-5xl md:text-6xl font-header font-black text-brand-primary uppercase tracking-tight mb-12">Process</h2>
+            <div className="mb-12">
+              <h2 className="text-3xl md:text-4xl font-header font-black text-brand-primary uppercase tracking-tight">our process</h2>
             </div>
             
             <div className="flex flex-col md:flex-row items-start justify-between gap-8">
@@ -178,7 +179,7 @@ export default function App() {
                   />
                 </div>
                 <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
-                  Sketching at the start helped us generate & iterate on many ideas, fast.
+                  Sketching at the start helped us generate & iterate on many ideas, fast
                 </p>
               </div>
 
@@ -187,17 +188,17 @@ export default function App() {
               </div>
 
               {/* Step 2 */}
-              <div className="flex-1 flex flex-col items-center text-center">
+              <div className="flex-[1.3] flex flex-col items-center text-center">
                 <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
                     src="Storyboarding.png" 
                     alt="Storyboarding" 
-                    className="w-full h-auto"
+                    className="w-full h-auto scale-110"
                     referrerPolicy="no-referrer"
                   />
                 </div>
                 <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
-                  Storyboarding a key interaction with the product helped us convey our concept after implementing user research.
+                  Storyboarding a key interaction with the product helped us convey our concept after implementing user research
                 </p>
               </div>
 
@@ -206,17 +207,17 @@ export default function App() {
               </div>
 
               {/* Step 3 */}
-              <div className="flex-1 flex flex-col items-center text-center">
-                <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
+              <div className="flex-[1.3] flex flex-col items-center text-center">
+                <div className="w-full aspect-[3/4] bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
                     src="PaperPrototypee.jpeg" 
                     alt="Paper Prototyping" 
-                    className="w-full h-auto rotate-90 scale-75 md:scale-100"
+                    className="w-full h-full object-cover rotate-90 scale-110 md:scale-125"
                     referrerPolicy="no-referrer"
                   />
                 </div>
                 <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
-                  Paper prototyping helped us test user flows and iterate on designs based on usability testing feedback.
+                  Paper prototyping helped us test user flows and iterate on designs based on usability testing feedback
                 </p>
               </div>
 
@@ -235,7 +236,7 @@ export default function App() {
                   />
                 </div>
                 <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
-                  Figma mock-up of our final design.
+                  Figma mock-up of our final design
                 </p>
               </div>
             </div>
@@ -264,6 +265,27 @@ export default function App() {
                 height="100%" 
                 src="https://www.youtube.com/embed/JfYlI48bSvU" 
                 title="BOOKED Concept Video" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </section>
+
+        {/* App Walkthrough Section */}
+        <section id="walkthrough" className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-lg font-accent font-bold text-brand-primary uppercase tracking-[0.2em] mb-4">Experience the App</h2>
+              <h3 className="text-4xl md:text-5xl font-header font-black text-brand-text mb-6">App Walkthrough</h3>
+              <p className="text-lg text-brand-text/70 font-body">Take a guided tour through the BOOKED interface and see our core features in action.</p>
+            </div>
+            <div className="max-w-sm mx-auto rounded-[2rem] overflow-hidden shadow-2xl border-8 border-brand-text/5 bg-brand-bg/10 aspect-[9/16] flex items-center justify-center">
+              <iframe 
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/OebDqjsiTdI" 
+                title="App Walkthrough"
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowFullScreen
