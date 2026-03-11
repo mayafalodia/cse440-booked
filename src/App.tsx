@@ -172,7 +172,7 @@ export default function App() {
               <div className="flex-1 flex flex-col items-center text-center">
                 <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
-                    src="Sketching.png" 
+                    src="/Sketching.png" 
                     alt="Sketching" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -191,7 +191,7 @@ export default function App() {
               <div className="flex-[1.3] flex flex-col items-center text-center">
                 <div className="w-full bg-brand-bg/10 rounded-xl mb-6 flex items-center justify-center border border-brand-text/5 overflow-hidden">
                   <img 
-                    src="Storyboarding.png" 
+                    src="/Storyboarding.png" 
                     alt="Storyboarding" 
                     className="w-full h-auto scale-110"
                     referrerPolicy="no-referrer"
