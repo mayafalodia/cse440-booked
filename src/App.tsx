@@ -25,9 +25,18 @@ import paperPrototypeImg from "./assets/Paper.jpeg";
 import figmaImg from "./assets/Figma.jpeg";
 import bookedFeaturesImg from "./assets/AppLayout.jpeg";
 import mayaImg from "./assets/maya.jpeg";
-import aditiImg from "./assets/aditi.jpeg";
 import ayeshaImg from "./assets/ayesha.jpeg";
+import aditiImg from "./assets/aditi.jpeg";
 import nityaImg from "./assets/nitya.jpeg";
+
+const TeamMember = ({ name }: { name: string }) => (
+  <div className="flex flex-col items-center space-y-2">
+    <div className="w-16 h-16 rounded-full bg-brand-primary/10 flex items-center justify-center text-brand-primary font-header text-xl font-bold">
+      {name[0]}
+    </div>
+    <span className="text-sm font-accent font-semibold text-brand-text">{name}</span>
+  </div>
+);
 
 const FeatureCard = ({ icon: Icon, title, description }: { icon: any, title: string, description: string }) => (
   <motion.div 
@@ -66,8 +75,9 @@ const Logo = ({ className = "" }: { className?: string }) => (
 export default function App() {
   const team = [
     { name: "Maya", role: "Project Manager", linkedin: "https://www.linkedin.com/in/maya-falodia/", image: mayaImg },
-    { name: "Aditi", role: "Software Engineer", linkedin: "https://www.linkedin.com/in/aditirrr/", image: aditiImg },
+    { name: "Dylan", role: "Graphic Designer" },
     { name: "Ayesha", role: "UX Designer", linkedin: "https://www.linkedin.com/in/ayeshakhan25/", image: ayeshaImg },
+    { name: "Aditi", role: "Software Engineer", linkedin: "https://www.linkedin.com/in/aditirrr/", image: aditiImg },
     { name: "Nitya", role: "Software Engineer", linkedin: "https://www.linkedin.com/in/nitya-addanki/", image: nityaImg }
   ];
 
@@ -82,8 +92,8 @@ export default function App() {
             <a href="#solution" className="hover:text-brand-primary transition-colors">Our Solution</a>
             <a href="#process" className="hover:text-brand-primary transition-colors">Our Process</a>
             <a href="#video" className="hover:text-brand-primary transition-colors">Concept</a>
-            <a href="#walkthrough" className="hover:text-brand-primary transition-colors">Walkthrough</a>
             <a href="#features" className="hover:text-brand-primary transition-colors">Features</a>
+            <a href="#walkthrough" className="hover:text-brand-primary transition-colors">Walkthrough</a>
             <a href="#team" className="hover:text-brand-primary transition-colors">Team</a>
           </div>
         </div>
@@ -176,6 +186,7 @@ export default function App() {
                     src={sketchingImg} 
                     alt="Sketching" 
                     className="w-full h-auto"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
@@ -194,6 +205,7 @@ export default function App() {
                     src={storyboardingImg} 
                     alt="Storyboarding" 
                     className="w-full h-auto scale-110"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
@@ -212,6 +224,7 @@ export default function App() {
                     src={paperPrototypeImg} 
                     alt="Paper Prototyping" 
                     className="w-full h-full object-cover rotate-90 scale-110 md:scale-125"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
@@ -230,6 +243,7 @@ export default function App() {
                     src={figmaImg} 
                     alt="Figma Mock-up" 
                     className="w-full h-auto"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <p className="text-sm md:text-base font-body text-brand-text leading-relaxed">
@@ -246,15 +260,6 @@ export default function App() {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-4xl md:text-5xl font-header font-black mb-6">See the vision.</h2>
               <p className="text-lg text-white/70 font-body mb-8">Watch our concept video to see how BOOKED is redefining the reading experience for the digital age.</p>
-              <a 
-                href="https://www.figma.com/design/Np3A7qP7Gm8j2U5xh0Ukt7/Booked?node-id=0-1&t=BmOgsTSzv8cRXB7K-1" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-brand-text rounded-full font-accent font-bold hover:bg-brand-primary hover:text-white transition-all shadow-lg group"
-              >
-                Explore the Design in Figma
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </a>
             </div>
             <div className="aspect-video w-full max-w-5xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/10">
               <iframe 
@@ -266,6 +271,53 @@ export default function App() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowFullScreen
               ></iframe>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section id="features" className="py-24 bg-brand-bg/10 scroll-mt-40">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <h2 className="text-4xl md:text-5xl font-header font-black mb-6 text-brand-text">Designed for the modern reader.</h2>
+              <p className="text-lg text-brand-text/70 font-body">We built the tools we wished we had to reclaim our focus and rediscover the joy of getting lost in a book.</p>
+              <div className="mt-8 mb-12">
+                <a 
+                  href="https://www.figma.com/design/Np3A7qP7Gm8j2U5xh0Ukt7/Booked?node-id=0-1&t=BmOgsTSzv8cRXB7K-1" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-brand-text text-white rounded-full font-accent font-bold hover:bg-brand-primary transition-all shadow-lg group"
+                >
+                  Explore the Design in Figma
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+              <div className="max-w-5xl mx-auto">
+                <img 
+                  src={bookedFeaturesImg} 
+                  alt="BOOKED App Interface" 
+                  className="w-full rounded-2xl shadow-xl border border-brand-text/5"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <FeatureCard 
+                icon={Sparkles}
+                title="Personalized book reviews"
+                description="Browse personalized book recommendations through short-form video and written reviews. Users can like reviews, explore suggested books, or chat with an AI assistant for tailored recommendations."
+              />
+              <FeatureCard 
+                icon={Calendar}
+                title="Plan reading sessions"
+                description="Schedule dedicated reading time by selecting open time blocks synced with your calendar. The app sends reminders to help you stay consistent with your reading plans."
+              />
+              <FeatureCard 
+                icon={Clock}
+                title="Track your reads"
+                description="Track your reading progress with a built-in timer and reading streak feature. Each session contributes to your overall progress and helps maintain your reading habit."
+              />
             </div>
           </div>
         </section>
@@ -287,41 +339,6 @@ export default function App() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowFullScreen
               ></iframe>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section id="features" className="py-24 bg-brand-bg/10 scroll-mt-40">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center max-w-3xl mx-auto mb-20">
-              <h2 className="text-4xl md:text-5xl font-header font-black mb-6 text-brand-text">Designed for the modern reader.</h2>
-              <p className="text-lg text-brand-text/70 font-body">We built the tools we wished we had to reclaim our focus and rediscover the joy of getting lost in a book.</p>
-              <div className="mt-12 max-w-5xl mx-auto">
-                <img 
-                  src={bookedFeaturesImg} 
-                  alt="BOOKED App Interface" 
-                  className="w-full rounded-2xl shadow-xl border border-brand-text/5"
-                />
-              </div>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <FeatureCard 
-                icon={BookOpen}
-                title="Smart Prioritization"
-                description="Stop staring at your shelf. Our algorithm helps you rank your TBR based on your current mood, time availability, and reading goals."
-              />
-              <FeatureCard 
-                icon={Calendar}
-                title="Reading Scheduler"
-                description="Sync with your calendar to find hidden pockets of time. Set reminders that nudge you to pick up a book instead of your phone."
-              />
-              <FeatureCard 
-                icon={Sparkles}
-                title="Curated Discovery"
-                description="No more generic best-seller lists. Get recommendations that understand your niche interests and past favorites."
-              />
             </div>
           </div>
         </section>
