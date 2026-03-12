@@ -24,15 +24,10 @@ import storyboardingImg from "./assets/Storyboarding.jpeg";
 import paperPrototypeImg from "./assets/Paper.jpeg";
 import figmaImg from "./assets/Figma.jpeg";
 import bookedFeaturesImg from "./assets/AppLayout.jpeg";
-
-const TeamMember = ({ name }: { name: string }) => (
-  <div className="flex flex-col items-center space-y-2">
-    <div className="w-16 h-16 rounded-full bg-brand-primary/10 flex items-center justify-center text-brand-primary font-header text-xl font-bold">
-      {name[0]}
-    </div>
-    <span className="text-sm font-accent font-semibold text-brand-text">{name}</span>
-  </div>
-);
+import mayaImg from "./assets/maya.jpeg";
+import aditiImg from "./assets/aditi.jpeg";
+import ayeshaImg from "./assets/ayesha.jpeg";
+import nityaImg from "./assets/nitya.jpeg";
 
 const FeatureCard = ({ icon: Icon, title, description }: { icon: any, title: string, description: string }) => (
   <motion.div 
@@ -70,11 +65,10 @@ const Logo = ({ className = "" }: { className?: string }) => (
 
 export default function App() {
   const team = [
-    { name: "Maya", role: "Project Manager", linkedin: "https://www.linkedin.com/in/maya-falodia/" },
-    { name: "Dylan", role: "Graphic Designer" },
-    { name: "Ayesha", role: "UX Designer", linkedin: "https://www.linkedin.com/in/ayeshakhan25/" },
-    { name: "Aditi", role: "Software Engineer", linkedin: "https://www.linkedin.com/in/aditirrr/" },
-    { name: "Nitya", role: "Software Engineer", linkedin: "https://www.linkedin.com/in/nitya-addanki/" }
+    { name: "Maya", role: "Project Manager", linkedin: "https://www.linkedin.com/in/maya-falodia/", image: mayaImg },
+    { name: "Aditi", role: "Software Engineer", linkedin: "https://www.linkedin.com/in/aditirrr/", image: aditiImg },
+    { name: "Ayesha", role: "UX Designer", linkedin: "https://www.linkedin.com/in/ayeshakhan25/", image: ayeshaImg },
+    { name: "Nitya", role: "Software Engineer", linkedin: "https://www.linkedin.com/in/nitya-addanki/", image: nityaImg }
   ];
 
   return (
@@ -345,8 +339,17 @@ export default function App() {
                 <div className="flex flex-wrap justify-center gap-8 md:gap-16">
                   {team.map((member) => (
                     <div key={member.name} className="flex flex-col items-center space-y-3">
-                      <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-2xl font-header font-black border border-white/20 text-brand-bg">
-                        {member.name[0]}
+                      <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-2xl font-header font-black border border-white/20 text-brand-bg overflow-hidden">
+                        {member.image ? (
+                          <img 
+                            src={member.image} 
+                            alt={member.name} 
+                            className="w-full h-full object-cover"
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : (
+                          member.name[0]
+                        )}
                       </div>
                       <div className="text-center">
                         <span className="block text-sm font-accent font-bold tracking-wide uppercase">{member.name}</span>
