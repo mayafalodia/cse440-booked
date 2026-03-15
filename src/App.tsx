@@ -75,10 +75,10 @@ const Logo = ({ className = "" }: { className?: string }) => (
 export default function App() {
   const team = [
     { name: "Maya", role: "Project Manager", linkedin: "https://www.linkedin.com/in/maya-falodia/", image: mayaImg },
-    { name: "Dylan", role: "Graphic Designer" },
-    { name: "Ayesha", role: "UX Designer", linkedin: "https://www.linkedin.com/in/ayeshakhan25/", image: ayeshaImg },
     { name: "Aditi", role: "Software Engineer", linkedin: "https://www.linkedin.com/in/aditirrr/", image: aditiImg },
-    { name: "Nitya", role: "Software Engineer", linkedin: "https://www.linkedin.com/in/nitya-addanki/", image: nityaImg }
+    { name: "Ayesha", role: "UX Designer", linkedin: "https://www.linkedin.com/in/ayeshakhan25/", image: ayeshaImg },
+    { name: "Nitya", role: "Software Engineer", linkedin: "https://www.linkedin.com/in/nitya-addanki/", image: nityaImg },
+    { name: "Dylan", role: "Graphic Designer" }
   ];
 
   return (
@@ -86,14 +86,16 @@ export default function App() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-[#fdfcf8]/80 backdrop-blur-md border-b border-brand-text/5">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col items-center gap-6">
-          <Logo className="text-4xl justify-center" />
+          <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+            <Logo className="text-4xl justify-center" />
+          </a>
           <div className="hidden md:flex items-center justify-center flex-wrap gap-x-8 gap-y-2 text-sm font-accent font-bold text-brand-text/70">
             <a href="#problem" className="hover:text-brand-primary transition-colors">The Problem</a>
             <a href="#solution" className="hover:text-brand-primary transition-colors">Our Solution</a>
             <a href="#process" className="hover:text-brand-primary transition-colors">Our Process</a>
             <a href="#video" className="hover:text-brand-primary transition-colors">Concept</a>
             <a href="#features" className="hover:text-brand-primary transition-colors">Features</a>
-            <a href="#walkthrough" className="hover:text-brand-primary transition-colors">Walkthrough</a>
+            <a href="#walkthrough" className="hover:text-brand-primary transition-colors">App Walkthrough</a>
             <a href="#team" className="hover:text-brand-primary transition-colors">Team</a>
           </div>
         </div>
@@ -127,7 +129,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-lg font-accent font-bold text-brand-primary uppercase tracking-[0.2em] mb-4">The Problem</h2>
+                <h2 className="text-4xl md:text-5xl font-header font-black text-brand-primary uppercase tracking-tight mb-4">The Problem</h2>
                 <h3 className="text-3xl md:text-4xl font-header font-black text-brand-text leading-tight">
                   Why is it so hard to just <span className="italic">read</span>?
                 </h3>
@@ -162,7 +164,7 @@ export default function App() {
                 </div>
               </div>
               <div className="order-1 md:order-2">
-                <h2 className="text-lg font-accent font-bold text-brand-primary uppercase tracking-[0.2em] mb-4">Our Solution</h2>
+                <h2 className="text-4xl md:text-5xl font-header font-black text-brand-primary uppercase tracking-tight mb-4">Our Solution</h2>
                 <h3 className="text-3xl md:text-4xl font-header font-black text-brand-text leading-tight mb-6">
                   We designed a mobile app to help
                 </h3>
@@ -175,7 +177,7 @@ export default function App() {
         <section id="process" className="py-24 bg-white scroll-mt-40">
           <div className="max-w-7xl mx-auto px-6">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl font-header font-black text-brand-primary uppercase tracking-tight">our process</h2>
+              <h2 className="text-4xl md:text-5xl font-header font-black text-brand-primary uppercase tracking-tight">our process</h2>
             </div>
             
             <div className="flex flex-col md:flex-row items-start justify-between gap-8">
@@ -258,7 +260,8 @@ export default function App() {
         <section id="video" className="py-24 bg-brand-text text-white scroll-mt-40">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-4xl md:text-5xl font-header font-black mb-6">See the vision.</h2>
+              <h2 className="text-4xl md:text-5xl font-header font-black text-brand-primary uppercase tracking-tight mb-6">Concept</h2>
+              <p className="text-sm font-accent font-bold text-brand-bg uppercase tracking-[0.2em] mb-2">See the vision.</p>
               <p className="text-lg text-white/70 font-body mb-8">Watch our concept video to see how BOOKED is redefining the reading experience for the digital age.</p>
             </div>
             <div className="aspect-video w-full max-w-5xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/10">
@@ -279,8 +282,8 @@ export default function App() {
         <section id="features" className="py-24 bg-brand-bg/10 scroll-mt-40">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-20">
-              <h2 className="text-4xl md:text-5xl font-header font-black mb-6 text-brand-text">Designed for the modern reader.</h2>
-              <p className="text-lg text-brand-text/70 font-body">We built the tools we wished we had to reclaim our focus and rediscover the joy of getting lost in a book.</p>
+              <h2 className="text-4xl md:text-5xl font-header font-black text-brand-primary uppercase tracking-tight mb-6">Features</h2>
+              <p className="text-lg text-brand-text/70 font-body">We build the tools readers wished they had to reclaim their focus and rediscover the joy of getting lost in a book.</p>
               <div className="mt-8 mb-12">
                 <a 
                   href="https://www.figma.com/design/Np3A7qP7Gm8j2U5xh0Ukt7/Booked?node-id=0-1&t=BmOgsTSzv8cRXB7K-1" 
@@ -326,8 +329,7 @@ export default function App() {
         <section id="walkthrough" className="py-24 bg-white scroll-mt-40">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-lg font-accent font-bold text-brand-primary uppercase tracking-[0.2em] mb-4">Experience the App</h2>
-              <h3 className="text-4xl md:text-5xl font-header font-black text-brand-text mb-6">App Walkthrough</h3>
+              <h2 className="text-4xl md:text-5xl font-header font-black text-brand-primary uppercase tracking-tight mb-6">App Walkthrough</h2>
               <p className="text-lg text-brand-text/70 font-body">Take a guided tour through the BOOKED interface and see our core features in action.</p>
             </div>
             <div className="max-w-sm mx-auto rounded-[2rem] overflow-hidden shadow-2xl border-8 border-brand-text/5 bg-brand-bg/10 aspect-[9/16] flex items-center justify-center">
@@ -349,7 +351,7 @@ export default function App() {
             <div className="bg-brand-text rounded-[3rem] p-12 md:p-20 text-white overflow-hidden relative">
               <div className="relative z-10 flex flex-col items-center text-center">
                 <Users className="mb-6 text-brand-bg" size={40} />
-                <h2 className="text-4xl md:text-5xl font-header font-black mb-8">Built by readers, for readers.</h2>
+                <h2 className="text-4xl md:text-5xl font-header font-black text-brand-primary uppercase tracking-tight mb-8">Team</h2>
                 <p className="text-xl text-white/80 max-w-2xl mb-12 font-body">
                   The team behind BOOKED is a group of passionate bibliophiles dedicated to making reading a priority in a distracted world.
                 </p>
