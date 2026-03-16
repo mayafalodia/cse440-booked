@@ -19,15 +19,15 @@ import {
 } from "lucide-react";
 
 // Import assets
-import sketchingImg from "./assets/Sketching.jpeg";
-import storyboardingImg from "./assets/Storyboarding.jpeg";
-import paperPrototypeImg from "./assets/Paper.jpeg";
-import figmaImg from "./assets/Figma.jpeg";
-import bookedFeaturesImg from "./assets/AppLayout.jpeg";
-import mayaImg from "./assets/maya.jpeg";
-import ayeshaImg from "./assets/ayesha.jpeg";
-import aditiImg from "./assets/aditi.jpeg";
-import nityaImg from "./assets/nitya.jpeg";
+import sketchingImg from "./Sketching.jpeg";
+import storyboardingImg from "./Storyboarding.jpeg";
+import paperPrototypeImg from "./Paper.jpeg";
+import figmaImg from "./Figma.jpeg";
+import bookedFeaturesImg from "./AppLayout.jpeg";
+import mayaImg from "./maya.jpeg";
+import ayeshaImg from "./ayesha.jpeg";
+import aditiImg from "./aditi.jpeg";
+import nityaImg from "./nitya.jpeg";
 
 const TeamMember = ({ name }: { name: string }) => (
   <div className="flex flex-col items-center space-y-2">
@@ -95,7 +95,7 @@ export default function App() {
             <a href="#process" className="hover:text-brand-primary transition-colors">Our Process</a>
             <a href="#video" className="hover:text-brand-primary transition-colors">Concept</a>
             <a href="#features" className="hover:text-brand-primary transition-colors">Features</a>
-            <a href="#walkthrough" className="hover:text-brand-primary transition-colors">App Walkthrough</a>
+            <a href="#app" className="hover:text-brand-primary transition-colors">App</a>
             <a href="#team" className="hover:text-brand-primary transition-colors">Team</a>
           </div>
         </div>
@@ -286,15 +286,6 @@ export default function App() {
               <p className="text-lg text-brand-text/70 font-body">We build the tools readers wished they had to reclaim their focus and rediscover the joy of getting lost in a book.</p>
               <div className="mt-8 mb-12 flex flex-col items-center gap-4">
                 <a 
-                  href="https://floret-task-78008475.figma.site/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-brand-primary text-white rounded-full font-accent font-bold hover:bg-brand-text transition-all shadow-lg group"
-                >
-                  Explore our Demo App
-                  <Sparkles size={18} className="group-hover:rotate-12 transition-transform" />
-                </a>
-                <a 
                   href="https://www.figma.com/design/Np3A7qP7Gm8j2U5xh0Ukt7/Booked?node-id=0-1&t=BmOgsTSzv8cRXB7K-1" 
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -334,11 +325,31 @@ export default function App() {
           </div>
         </section>
 
-        {/* App Walkthrough Section */}
-        <section id="walkthrough" className="py-24 bg-white scroll-mt-40">
+        {/* App Section */}
+        <section id="app" className="py-24 bg-white scroll-mt-40">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-4xl md:text-5xl font-header font-black text-brand-primary uppercase tracking-tight mb-6">App Walkthrough</h2>
+              <h2 className="text-4xl md:text-5xl font-header font-black text-brand-primary uppercase tracking-tight mb-6">App</h2>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                <a 
+                  href="https://floret-task-78008475.figma.site/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-brand-primary text-white rounded-full font-accent font-bold hover:bg-brand-text transition-all shadow-lg group"
+                >
+                  Explore our Demo App
+                  <Sparkles size={18} className="group-hover:rotate-12 transition-transform" />
+                </a>
+                <a 
+                  href="https://github.com/NityaAddanki/Booked" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-brand-text text-white rounded-full font-accent font-bold hover:bg-brand-primary transition-all shadow-lg group"
+                >
+                  Booked App GitHub
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
               <p className="text-lg text-brand-text/70 font-body">Take a guided tour through the BOOKED interface and see our core features in action.</p>
             </div>
             <div className="max-w-sm mx-auto rounded-[2rem] overflow-hidden shadow-2xl border-8 border-brand-text/5 bg-brand-bg/10 aspect-[9/16] flex items-center justify-center">
