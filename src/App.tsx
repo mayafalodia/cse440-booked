@@ -284,7 +284,16 @@ export default function App() {
             <div className="text-center max-w-3xl mx-auto mb-20">
               <h2 className="text-4xl md:text-5xl font-header font-black text-brand-primary uppercase tracking-tight mb-6">Features</h2>
               <p className="text-lg text-brand-text/70 font-body">We build the tools readers wished they had to reclaim their focus and rediscover the joy of getting lost in a book.</p>
-              <div className="mt-8 mb-12">
+              <div className="mt-8 mb-12 flex flex-col items-center gap-4">
+                <a 
+                  href="https://floret-task-78008475.figma.site/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-brand-primary text-white rounded-full font-accent font-bold hover:bg-brand-text transition-all shadow-lg group"
+                >
+                  Explore our Demo App
+                  <Sparkles size={18} className="group-hover:rotate-12 transition-transform" />
+                </a>
                 <a 
                   href="https://www.figma.com/design/Np3A7qP7Gm8j2U5xh0Ukt7/Booked?node-id=0-1&t=BmOgsTSzv8cRXB7K-1" 
                   target="_blank" 
